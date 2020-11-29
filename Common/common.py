@@ -37,17 +37,6 @@ def get_url_from_xml(name):
 
 
 def get_register_data_from_other_sheet(xls_name):
-    # xlsPath = os.path.join(proDir, "testFile", "case", xls_name)
-    # file = open_workbook(xlsPath)
-    # orginal_sheet = file.get_sheet(0)
-    # data_sheet = file.get_sheet(1)
-    # data_sheet.write(4, 2, data_sheet.cell(1, 1).value)
-    # data_sheet.write(4, 3, data_sheet.cell(1, 2).value)
-    # # orginal_sheet.row_values(4)[2] = data_sheet.cell(1, 1).value
-    # # orginal_sheet.row_values(4)[3] = data_sheet.cell(1, 2).value
-    # print("fuc")
-    # print(orginal_sheet.row_values(4)[2])
-    # print(orginal_sheet.row_values(4)[3])
 
     xlsPath = os.path.join(proDir, "testFile", "case", xls_name)
     file = openpyxl.load_workbook(xlsPath)
@@ -73,4 +62,4 @@ def show_return_msg(response):
 
 
 if __name__ == "__main__":
-    get_register_data_from_other_sheet("testRegister.xlsx")
+    get_xls("testRegister.xlsx","cardCheck")
